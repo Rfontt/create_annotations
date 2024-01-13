@@ -1,6 +1,5 @@
 package domain
 
-import java.math.BigDecimal
 import kotlin.reflect.full.declaredMemberProperties
 import kotlin.reflect.full.findAnnotation
 
@@ -15,8 +14,6 @@ fun maskValue(obj: Any) {
         .forEach { (property) ->
             val field = obj::class.java.getDeclaredField(property.name)
 
-            println(field)
-
             field.isAccessible = true
 
             field.get(obj).let {
@@ -24,7 +21,7 @@ fun maskValue(obj: Any) {
                     String::class.java -> field.set(obj, "*".repeat((it as String).length))
                     Int::class.java -> field.set(obj, 0)
                     Double::class.java -> field.set(obj, 0.0)
-                    else -> maskValue(field)
+                    else -> maskValue(it)
                 }
             }
         }

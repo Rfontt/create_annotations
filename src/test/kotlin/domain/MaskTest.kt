@@ -1,24 +1,27 @@
 package domain
 
-import domain.client.Client
+import domain.MaskTestFixture.client
+import domain.MaskTestFixture.clientMasked
 import io.kotest.core.spec.style.DescribeSpec
+import io.kotest.matchers.shouldBe
 
 class MaskTest: DescribeSpec({
     describe("Mask Annotation Test") {
-        it ("Should mask the client's postal code") {
-            val client = Client(
-                name = "Marlin Stone",
-                cpf = "senectus",
-                address = Client.Address(
-                    street = "aperiri",
-                    number = "ac",
-                    postalCode = "accommodare"
-                )
-            )
+        it ("Should mask the client's address") {
+            val addressNumber = "123"
+            val client = client(addressNumber)
 
             maskValue(client)
 
-            println("client $client")
+            client shouldBe clientMasked(addressNumber)
+        }
+
+        it ("Should not mask a null value") {
+            val client = client()
+
+            maskValue(client)
+
+            client.address.number shouldBe null
         }
     }
 })
