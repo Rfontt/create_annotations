@@ -4,7 +4,7 @@ import kotlin.reflect.full.declaredMemberProperties
 import kotlin.reflect.full.findAnnotation
 
 @Retention(AnnotationRetention.RUNTIME)
-annotation class Mask()
+annotation class Mask
 
 fun maskValue(obj: Any) {
     obj::class.declaredMemberProperties

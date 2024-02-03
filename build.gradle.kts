@@ -16,7 +16,6 @@ dependencies {
     testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
     testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
-    // Outras dependências, se necessário
 }
 
 tasks.withType<Test>().configureEach {
