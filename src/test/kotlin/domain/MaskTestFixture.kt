@@ -2,10 +2,14 @@ package domain
 
 import domain.client.Client
 import domain.client.Client.Address
+import java.util.UUID
 
 object MaskTestFixture {
 
     fun client(addressNumber: String? = null) = Client(
+        id = Client.ClientId(
+            id = UUID.fromString("6158173d-c761-4960-a241-b7b4716a63b7")
+        ),
         name = "Marlin Stone",
         cpf = "00000000000",
         address = Address(

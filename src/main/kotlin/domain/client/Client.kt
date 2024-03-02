@@ -1,8 +1,11 @@
 package domain.client
 
+import domain.AggregateId
 import domain.Mask
+import java.util.UUID
 
 data class Client(
+    val id: ClientId,
     val name: String,
     @property:Mask
     val cpf: String,
@@ -17,4 +20,8 @@ data class Client(
         @property:Mask
         val postalCode: String
     )
+
+    data class ClientId(
+        override val id: UUID
+    ): AggregateId(id)
 }
