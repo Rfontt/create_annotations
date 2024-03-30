@@ -3,7 +3,7 @@ plugins {
     application
 }
 
-group = "org.project"
+group = "com.ecommerce"
 version = "1.0-SNAPSHOT"
 
 val kotestVersion = "5.8.0"
@@ -13,14 +13,6 @@ repositories {
 }
 
 val Project.fullName: String get() = (parent?.fullName?.plus("-") ?: "") + name
-
-tasks.withType<Test>().configureEach {
-    useJUnitPlatform()
-}
-
-kotlin {
-    jvmToolchain(8)
-}
 
 subprojects {
     if (file("src/main/kotlin").isDirectory || file("src/main/resources").isDirectory) {
