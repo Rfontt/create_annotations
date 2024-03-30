@@ -19,9 +19,9 @@ class ClientCommandHandler(
                     name = name,
                     cpf = cpf,
                     address = Client.Address(
-                        street = metaData.get("street") ?: "",
-                        number = metaData.get("number"),
-                        postalCode = metaData.get("postalCode") ?: ""
+                        street = metaData["street"] ?: "",
+                        number = metaData["number"],
+                        postalCode = metaData["postalCode"] ?: ""
                     )
                 )
             )
