@@ -1,7 +1,7 @@
-package domain
+package com.ecommerce.domain
 
-import domain.MaskTestFixture.client
-import domain.MaskTestFixture.clientMasked
+import com.ecommerce.domain.MaskTestFixture.client
+import com.ecommerce.domain.MaskTestFixture.clientMasked
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
 

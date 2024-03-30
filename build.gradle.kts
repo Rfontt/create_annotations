@@ -12,11 +12,7 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
-    testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
-}
+val Project.fullName: String get() = (parent?.fullName?.plus("-") ?: "") + name
 
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
@@ -26,6 +22,24 @@ kotlin {
     jvmToolchain(8)
 }
 
-application {
-    mainClass.set("MainKt")
+subprojects {
+    if (file("src/main/kotlin").isDirectory || file("src/main/resources").isDirectory) {
+        apply {
+            plugin("org.jetbrains.kotlin.jvm")
+        }
+
+        dependencies {
+            testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
+            testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
+            implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
+        }
+
+        tasks.withType<Test>().configureEach {
+            useJUnitPlatform()
+        }
+
+        kotlin {
+            jvmToolchain(8)
+        }
+    }
 }

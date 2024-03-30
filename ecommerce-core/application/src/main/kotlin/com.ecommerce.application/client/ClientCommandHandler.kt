@@ -1,9 +1,8 @@
-package application.client
+package com.ecommerce.application.client
 
-import domain.Handler
-import domain.client.Client
-import domain.client.ClientRepository
-import java.util.*
+import com.ecommerce.domain.Handler
+import com.ecommerce.domain.client.Client
+import com.ecommerce.domain.client.ClientRepository
 
 class ClientCommandHandler(
     private val clientRepository: ClientRepository,

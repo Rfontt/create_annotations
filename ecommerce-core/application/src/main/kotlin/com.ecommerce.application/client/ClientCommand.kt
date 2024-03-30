@@ -1,7 +1,7 @@
-package application.client
+package com.ecommerce.application.client
 
-import domain.Command
-import domain.client.Client.ClientId
+import com.ecommerce.domain.Command
+import com.ecommerce.domain.client.Client.ClientId
 
 data class ClientCommand (
     override val aggregateId: ClientId,

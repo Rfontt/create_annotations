@@ -1,4 +1,4 @@
-package domain
+package com.ecommerce.domain
 
 import kotlin.reflect.full.declaredMemberProperties
 import kotlin.reflect.full.findAnnotation

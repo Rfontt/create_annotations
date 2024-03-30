@@ -1,7 +1,7 @@
-package domain.client
+package com.ecommerce.domain.client
 
-import domain.AggregateId
-import domain.Mask
+import com.ecommerce.domain.AggregateId
+import com.ecommerce.domain.Mask
 import java.util.UUID
 
 data class Client(

@@ -1,4 +1,4 @@
-package domain
+package com.ecommerce.domain
 
 import java.util.UUID
 

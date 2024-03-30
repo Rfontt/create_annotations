@@ -1,7 +1,7 @@
-package domain
+package com.ecommerce.domain
 
-import domain.client.Client
-import domain.client.Client.Address
+import com.ecommerce.domain.client.Client
+import com.ecommerce.domain.client.Client.Address
 import java.util.UUID
 
 object MaskTestFixture {
