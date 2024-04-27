@@ -1,8 +1,17 @@
 # Temas técnicos desse projeto
 
+- [System design](#architecture)
 - [Annotations](#annotations)
 - Ports and adapters
 - [DDD](#ddd)
+
+## Architecture
+
+### System Design
+
+- Diagrama de contexto: O nível de contexto fornece uma visão geral do sistema, mostrando como ele se relaciona com o ambiente externo, incluindo usuários, sistemas externos e outras entidades com as quais interage.
+
+![Diagrama de contexto](./diagrams/context_diagram.png)
 
 ## Annotations
 
@@ -179,6 +188,7 @@ class MaskTest: DescribeSpec({
     }
 })
 ```
+
 ## DDD
 
 Antes de implementarmos o DDD no nosso projeto, precisamos adaptá-lo para lidar com esse design. Primeiramente, precisamos entender que estamos trabalhando com o kotlin juntamente com gradle. Para isso, precisamos usá-lo a nosso favor.
