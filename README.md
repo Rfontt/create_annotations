@@ -11,7 +11,12 @@
 
 - Diagrama de contexto: O nível de contexto fornece uma visão geral do sistema, mostrando como ele se relaciona com o ambiente externo, incluindo usuários, sistemas externos e outras entidades com as quais interage.
 
-![Diagrama de contexto](./diagrams/context_diagram.png)
+![Diagrama de contexto](./diagrams/context.png)
+
+- Diagrama de containers: No nível de componentes, detalha-se o interior de cada contêiner, identificando os principais componentes de software e suas interações.
+
+![Diagrama de containers](./diagrams/containers.png)
+
 
 ## Annotations
 
