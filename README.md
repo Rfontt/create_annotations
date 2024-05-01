@@ -13,9 +13,13 @@
 
 ![Diagrama de contexto](./diagrams/context.png)
 
-- Diagrama de containers: No nível de componentes, detalha-se o interior de cada contêiner, identificando os principais componentes de software e suas interações.
+- Diagrama de containers: Este nível descreve os principais subsistemas ou contêiners que compõem o sistema de software.
 
 ![Diagrama de containers](./diagrams/containers.png)
+
+- Diagrama de componentes: No nível de componentes, detalha-se o interior de cada contêiner, identificando os principais componentes de software e suas interações.
+
+![Diagrama de containers](./diagrams/components.png)
 
 
 ## Annotations
